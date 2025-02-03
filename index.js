@@ -4,9 +4,5 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());
-//app.get('/', (req, res) => res.send('Hello World!'))
-//app.get('/', (req, res) => res.end()) /*returns empty body response*/
-//app.get('/', (req, res) => res.status(400).end())/*empty response body*/
-//app.get('/', (req, res) => res.status(400).send('Sorry, cant that'))
-app.get('/', (req, res) => res.json({ domain: '.flaviocopes.com', path: '/administrator', secure: true }))
+app.get('/', (req, res) => res.status(200).json({ email: 'adigunkehinde35@gmail.com', current_datetime: new Date().toISOString(), github_url: "https://github.com/kenrash/HNG12-nodejs-task1" }))
 app.listen(3000, () => console.log('Server ready'))
